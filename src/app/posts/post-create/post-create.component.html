@@ -1,0 +1,65 @@
+<mat-card>
+    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+        <h2>Enter Feedback System</h2>
+
+        <mat-form-field>
+            <mat-label>Teacher's Name</mat-label>
+            <input matInput type='text' name="title" ngModel required #title="ngModel">
+            <mat-error *ngIf="title.invalid">Please enter a post title</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Subject </mat-label>
+            <textarea matInput name="Description" ngModel required #Description="ngModel"></textarea>
+            <mat-error *ngIf="Description.invalid">Please enter a post content</mat-error>
+        </mat-form-field>
+        <mat-label>Subject Knowledge </mat-label>
+        <br>
+        <button mat-raised-button type="radio" color="primary">1</button>
+        <button mat-raised-button type="radio" color="primary">2</button>
+        <button mat-raised-button type="radio" color="primary">3</button>
+        <button mat-raised-button type="radio" color="primary">4</button>
+        <button mat-raised-button type="radio" color="primary">5</button>
+        <br><br>
+
+
+        <mat-label>Quality of Instruction </mat-label>
+        <br>
+        <button mat-raised-button type="radio" color="primary">1</button>
+        <button mat-raised-button type="radio" color="primary">2</button>
+        <button mat-raised-button type="radio" color="primary">3</button>
+        <button mat-raised-button type="radio" color="primary">4</button>
+        <button mat-raised-button type="radio" color="primary">5</button>
+        <br><br>
+
+
+        <mat-label>Creativity </mat-label>
+        <br>
+        <div class="btn-group" role="group" aria-label="Isolate Button group" id="QTI">
+
+            <button mat-raised-button type="radio" color="primary" class="btn btn-secondary">1</button>
+            <button mat-raised-button type="radio" color="primary" class="btn btn-warning">2</button>
+            <button mat-raised-button type="radio" color="primary" class="btn btn-warning">3</button>
+            <button mat-raised-button type="radio" color="primary" class="btn btn-warning">4</button>
+            <button mat-raised-button type="radio" color="primary" class="btn btn-warning">5</button>
+        </div>
+        <br><br>
+
+
+        <mat-label>Approachable </mat-label><br>
+        <button mat-raised-button type="radio" color="primary">1</button>
+        <button mat-raised-button type="radio" color="primary">2</button>
+        <button mat-raised-button type="radio" color="primary">3</button>
+        <button mat-raised-button type="radio" color="primary">4</button>
+        <button mat-raised-button type="radio" color="primary">5</button>
+        <br><br>
+
+        <mat-form-field>
+            <mat-label>Feedback</mat-label>
+            <textarea matInput name="Water" ngModel required #Water="ngModel"></textarea>
+            <mat-error *ngIf="Water.invalid">Please enter Feedback</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" color="primary">Save Feedback</button>
+    </form>
+</mat-card>
